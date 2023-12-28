@@ -1,0 +1,239 @@
+html {
+  font-size: 62.5%;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #292524;
+  color: #fafaf9;
+  font-family: "sono", sans-serif;
+  padding: 4.8rem 6.4rem 0rem;
+}
+/* MAIN LAYOUT */
+#root {
+  max-width: 150rem;
+  margin: 0 auto;
+}
+.header {
+  margin-bottom: 4rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 25rem 1fr;
+  gap: 4.8rem;
+  height: calc(100vh - 4.8rem - 6.8rem - 4rem);
+}
+@media (max-width: 900px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+}
+section {
+  overflow: scroll;
+  padding-bottom: 4rem;
+}
+@media (max-width: 900px) {
+  .main {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  #root {
+    padding: 2.4rem;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  .fact-form {
+    padding: 1.6rem;
+  }
+
+  .fact {
+    padding: 1.2rem 1.6rem;
+  }
+}
+/* ELEMENTS */
+
+/* ==== BUTTON ===== */
+.btn {
+  border: none;
+  color: inherit;
+  font-family: "coiny";
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  padding: 1.6rem 0 1.3rem;
+  border-radius: 10rem;
+  background-image: linear-gradient(135deg, #3b82f6, #ef4444, #16a34a, #eab308);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.btn:hover {
+  transform: scale(110%) rotate(-2deg);
+}
+.btn-large {
+  font-size: 2rem;
+  padding: 2rem 3.2rem 1.7rem;
+}
+.btn-all-categories {
+  width: 100%;
+  margin-bottom: 1.6rem;
+}
+.btn-category {
+  width: 100%;
+  background-image: none;
+}
+.vote-buttons {
+  margin-left: auto;
+  flex-shrink: 0;
+  display: flex;
+  gap: 0.8rem;
+}
+.vote-buttons button {
+  border: none;
+  font-size: 1.8rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10rem;
+  background-color: #78716c;
+  color: inherit;
+  font-family: inherit;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.vote-buttons button:hover {
+  background-color: #292524;
+}
+
+.vote-buttons button:disabled {
+  background-color: #44403c;
+}
+/* ==== END OF BUTTON ==== */
+
+/* ==== FORM ==== */
+.fact-form {
+  background-color: #44403c;
+  margin-bottom: 4rem;
+  padding: 1.6rem 3.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  border-radius: 1.6rem;
+}
+.fact-form input,
+.fact-form select {
+  width: 22rem;
+  background-color: #78716c;
+  border: none;
+  border-radius: 10rem;
+  padding: 1.6rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: inherit;
+}
+.fact-form span {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-right: 1.8rem;
+}
+.fact-form input::placeholder {
+  color: #a8a29e;
+}
+.fact-form input:first-child {
+  flex-grow: 1;
+}
+@media (max-width: 1000px) {
+  .body {
+    padding: 3.2rem 4.8rem;
+  }
+  .fact-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .fact-form input,
+  .fact-form select {
+    width: auto;
+  }
+}
+.loader {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: 600;
+}
+/* ==== END OF FORM ==== */
+
+.source:link,
+.source:visited {
+  text-decoration: none;
+  color: #a8a29e;
+  margin-left: 1.2rem;
+  transition: 0.3s;
+}
+.source:hover {
+  color: #3b82f6;
+}
+.logo img {
+  height: 68px;
+  width: 68px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+h1 {
+  font-size: 4.2rem;
+  font-family: "coiny", arial, sans-serif;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-top: 0.6rem;
+}
+.category {
+  margin-bottom: 1.6rem;
+}
+.fact {
+  font-size: 2rem;
+  line-height: 1.4;
+  background-color: #44403c;
+  margin-bottom: 1.6rem;
+  padding: 1.6rem 3rem;
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  letter-spacing: -0.1rem;
+  border-radius: 1.6rem;
+}
+@media (max-width: 1200px) {
+  .fact {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.2rem;
+  }
+}
+.tag {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-family: "coiny";
+  padding-top: 0.3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.hidden {
+  display: none;
+}
+ul {
+  list-style: none;
+}
